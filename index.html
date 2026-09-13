@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#08090d" />
+  <title>NOX — Build The Future</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="loader" id="loader">
+    <div class="loader-orbit loader-orbit-one"></div>
+    <div class="loader-orbit loader-orbit-two"></div>
+    <div class="loader-core"></div>
+    <p>INITIALIZING EXPERIENCE</p>
+    <div class="loader-progress">
+      <span id="loaderProgress"></span>
+    </div>
+    <span class="loader-percent" id="loaderPercent">0%</span>
+  </div>
+
+  <div class="cursor-dot"></div>
+  <div class="cursor-ring"></div>
+
+  <div class="noise"></div>
+  <div class="scroll-progress">
+    <span></span>
+  </div>
+
+  <header class="navbar" id="navbar">
+    <a href="#home" class="logo magnetic" data-cursor="hover">
+      <span class="logo-mark">N</span>
+      <span>NOX<span class="logo-dot">.</span></span>
+    </a>
+
+    <nav class="desktop-nav">
+      <a href="#home" data-cursor="hover">Home</a>
+      <a href="#about" data-cursor="hover">About</a>
+      <a href="#experience" data-cursor="hover">Experience</a>
+      <a href="#services" data-cursor="hover">Services</a>
+      <a href="#contact" data-cursor="hover">Contact</a>
+    </nav>
+
+    <a href="#contact" class="nav-cta magnetic" data-cursor="hover">Start a project <span>↗</span></a>
+
+    <button class="menu-button" id="menuButton" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home">Home <span>01</span></a>
+    <a href="#about">About <span>02</span></a>
+    <a href="#experience">Experience <span>03</span></a>
+    <a href="#services">Services <span>04</span></a>
+    <a href="#contact">Contact <span>05</span></a>
+  </div>
+
+  <main>
+    <section class="hero section-dark" id="home">
+      <canvas id="heroCanvas"></canvas>
+
+      <div class="hero-grid"></div>
+      <div class="hero-vignette"></div>
+
+      <div class="hero-copy">
+        <div class="eyebrow reveal-up">
+          <span class="eyebrow-line"></span>
+          Independent digital studio / 2026
+        </div>
+
+        <h1 class="hero-title reveal-up">
+          <span>BUILD</span>
+          <span class="title-outline">THE</span>
+          <span>FUTURE<span class="title-dot">.</span></span>
+        </h1>
+
+        <div class="hero-bottom reveal-up">
+          <p>
+            We create immersive digital experiences where bold ideas,
+            intelligent technology and cinematic design converge.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#experience" class="button button-primary magnetic" data-cursor="hover">
+              <span>Explore</span>
+              <span class="button-arrow">↘</span>
+            </a>
+            <a href="#contact" class="button button-ghost magnetic" data-cursor="hover">
+              <span>Get started</span>
+              <span class="button-arrow">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-meta">
+        <span>Scroll to enter</span>
+        <div class="scroll-line"><span></span></div>
+      </div>
+
+      <div class="hero-location">
+        <span>40.7128° N</span>
+        <span>74.0060° W</span>
+      </div>
+    </section>
+
+    <section class="about section-light" id="about">
+      <div class="section-shell">
+        <div class="section-heading split-heading">
+          <div>
+            <span class="section-index">01 / About</span>
+            <h2>Digital worlds<br /><em>without limits.</em></h2>
+          </div>
+          <p class="section-intro">
+            NOX is an independent creative technology studio building
+            next-generation interfaces, identities and immersive experiences
+            for ambitious brands.
+          </p>
+        </div>
+
+        <div class="about-layout">
+          <div class="about-statement">
+            <p class="large-copy">
+              We turn complex systems into <span>clear, visceral</span>
+              experiences that people remember.
+            </p>
+            <a href="#contact" class="text-link magnetic" data-cursor="hover">
+              Our approach <span>↗</span>
+            </a>
+          </div>
+
+          <div class="stat-grid">
+            <article class="stat-card tilt-card">
+              <span class="stat-number">50<span>+</span></span>
+              <span class="stat-label">Projects launched</span>
+              <div class="card-orb orb-cyan"></div>
+            </article>
+
+            <article class="stat-card tilt-card">
+              <span class="stat-number">20<span>+</span></span>
+              <span class="stat-label">Global clients</span>
+              <div class="card-orb orb-orange"></div>
+            </article>
+
+            <article class="stat-card tilt-card">
+              <span class="stat-number">05<span>+</span></span>
+              <span class="stat-label">Years of making</span>
+              <div class="card-orb orb-lime"></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience section-dark" id="experience">
+      <canvas id="experienceCanvas"></canvas>
+      <div class="experience-overlay"></div>
+
+      <div class="section-shell experience-shell">
+        <div class="experience-top">
+          <span class="section-index">02 / Experience</span>
+          <span class="mono-label">A SYNTHETIC ENVIRONMENT FOR IDEAS</span>
+        </div>
+
+        <div class="experience-title">
+          <h2>Enter the<br /><em>unknown.</em></h2>
+          <p>
+            Every interaction is engineered to feel alive. Move through our
+            digital environment and discover a different kind of clarity.
+          </p>
+        </div>
+
+        <div class="experience-label label-one">
+          <span class="label-number">01</span>
+          <span class="label-line"></span>
+          <span>SPATIAL SYSTEMS</span>
+        </div>
+
+        <div class="experience-label label-two">
+          <span class="label-number">02</span>
+          <span class="label-line"></span>
+          <span>FLUID INTERACTIONS</span>
+        </div>
+
+        <div class="experience-label label-three">
+          <span class="label-number">03</span>
+          <span class="label-line"></span>
+          <span>NEW PERSPECTIVES</span>
+        </div>
+
+        <div class="experience-footer">
+          <span>Drag / move to explore</span>
+          <span class="experience-coordinates">X 042 / Y 084 / Z 019</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="services section-light" id="services">
+      <div class="section-shell">
+        <div class="section-heading">
+          <span class="section-index">03 / Capabilities</span>
+          <h2>Built for<br /><em>what's next.</em></h2>
+        </div>
+
+        <div class="service-list">
+          <article class="service-card tilt-card">
+            <div class="service-number">01</div>
+            <div class="service-icon icon-code">
+              <span>&lt;</span><span>/</span><span>&gt;</span>
+            </div>
+            <div class="service-content">
+              <h3>Web Development</h3>
+              <p>
+                High-performance digital products engineered for speed,
+                scalability and distinction.
+              </p>
+              <div class="service-tags">
+                <span>WebGL</span><span>React</span><span>Webflow</span>
+              </div>
+            </div>
+            <span class="service-arrow">↗</span>
+          </article>
+
+          <article class="service-card tilt-card">
+            <div class="service-number">02</div>
+            <div class="service-icon icon-3d">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="service-content">
+              <h3>3D Experiences</h3>
+              <p>
+                Immersive environments that transform passive browsing into
+                active discovery.
+              </p>
+              <div class="service-tags">
+                <span>Three.js</span><span>Motion</span><span>Shaders</span>
+              </div>
+            </div>
+            <span class="service-arrow">↗</span>
+          </article>
+
+          <article class="service-card tilt-card">
+            <div class="service-number">03</div>
+            <div class="service-icon icon-ui">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="service-content">
+              <h3>UI / UX Design</h3>
+              <p>
+                Interfaces that make complex products feel obvious, useful and
+                impossible to forget.
+              </p>
+              <div class="service-tags">
+                <span>Strategy</span><span>Systems</span><span>Prototyping</span>
+              </div>
+            </div>
+            <span class="service-arrow">↗</span>
+          </article>
+
+          <article class="service-card tilt-card">
+            <div class="service-number">04</div>
+            <div class="service-icon icon-tech">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <div class="service-content">
+              <h3>Creative Technology</h3>
+              <p>
+                Experimental tools and intelligent systems that make the
+                impossible feel inevitable.
+              </p>
+              <div class="service-tags">
+                <span>AI</span><span>Generative</span><span>R&D</span>
+              </div>
+            </div>
+            <span class="service-arrow">↗</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="showcase section-dark" id="showcase">
+      <div class="section-shell">
+        <div class="showcase-heading">
+          <div>
+            <span class="section-index">04 / Selected work</span>
+            <h2>Made to<br /><em>move you.</em></h2>
+          </div>
+          <p>Selected experiments and collaborations from the NOX archive.</p>
+        </div>
+
+        <div class="project-track">
+          <article class="project-card project-one">
+            <div class="project-art">
+              <div class="project-sphere"></div>
+              <div class="project-grid"></div>
+            </div>
+            <div class="project-info">
+              <span>01 / Digital identity</span>
+              <h3>Ocular Systems</h3>
+              <p>A visual language for the machines that see tomorrow.</p>
+              <a href="#contact" class="project-link magnetic" data-cursor="hover">View project ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card project-two">
+            <div class="project-art">
+              <div class="project-rings"></div>
+              <div class="project-glow"></div>
+            </div>
+            <div class="project-info">
+              <span>02 / Immersive platform</span>
+              <h3>Deep Field</h3>
+              <p>An interactive universe for the next generation of explorers.</p>
+              <a href="#contact" class="project-link magnetic" data-cursor="hover">View project ↗</a>
+            </div>
+          </article>
+
+          <article class="project-card project-three">
+            <div class="project-art">
+              <div class="project-cube"></div>
+              <div class="project-rays"></div>
+            </div>
+            <div class="project-info">
+              <span>03 / Product experience</span>
+              <h3>Forma / 01</h3>
+              <p>Making advanced technology feel beautifully human.</p>
+              <a href="#contact" class="project-link magnetic" data-cursor="hover">View project ↗</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact section-light" id="contact">
+      <div class="section-shell contact-shell">
+        <div class="contact-heading">
+          <span class="section-index">05 / Contact</span>
+          <h2>Let's<br /><em>create.</em></h2>
+          <p>
+            Have a vision that refuses to stay ordinary? Tell us where you want
+            to go.
+          </p>
+        </div>
+
+        <form class="contact-form">
+          <label>
+            <span>01 / Your name</span>
+            <input type="text" placeholder="Enter your name" required />
+          </label>
+
+          <label>
+            <span>02 / Email address</span>
+            <input type="email" placeholder="you@company.com" required />
+          </label>
+
+          <label>
+            <span>03 / Tell us about it</span>
+            <textarea placeholder="A few words about your project..." required></textarea>
+          </label>
+
+          <button class="submit-button magnetic" data-cursor="hover" type="submit">
+            <span>Send inquiry</span>
+            <span>↗</span>
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer section-dark">
+    <div class="footer-line"></div>
+    <div class="footer-inner">
+      <a href="#home" class="logo">
+        <span class="logo-mark">N</span>
+        <span>NOX<span class="logo-dot">.</span></span>
+      </a>
+      <span class="footer-copy">© 2026 NOX Studio. All rights reserved.</span>
+      <div class="footer-socials">
+        <a href="#contact">Instagram</a>
+        <a href="#contact">LinkedIn</a>
+        <a href="#contact">Are.na</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
